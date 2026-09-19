@@ -9,7 +9,7 @@ module mux_beh (
   input       I0,
   input       I1,
   input       S,
-  output wire Y
+  output reg Y //reg and not a wire
 );
 
   always @(*) begin
@@ -20,3 +20,5 @@ module mux_beh (
   end
 
 endmodule
+
+//here Y is written inside a procedural always block, which requires a varialble to hold value between trigger events and a wire has no such storage.
